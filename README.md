@@ -1,6 +1,17 @@
-# React + Vite
+# Color Confirmer
+## v0.0.1
+---
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+### devDependencies 
+---
+
+``` 
+npm install -D vitest @vitest/ui eslint-plugin-vitest
+npm install -D jsdom @testing-library/jest-dom @testing-library/react
+
+
 
 Currently, two official plugins are available:
 
