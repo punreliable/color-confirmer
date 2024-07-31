@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react';
+import {render, screen, fireEvent } from '@testing-library/react';
 import {logRoles} from "@testing-library/dom";
 import App from './App';
 
@@ -19,3 +19,14 @@ test("Button starts with correct text", () => {
 test("Button starts with correct color", () => {});
 test("Button has correct color after click", () => {});
 test("Button has correct text after click", () => {});
+
+
+// App renders Flow
+// - Find the button
+// - check the text
+// - check the color
+
+// Button Click Flow
+// - click the button
+// - check the text
+// - check the color
