@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import punLogo from '/logo-punreliable.svg'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+
+  function increaseCount(count) {
+    setCount((count) => count + 1);
+  }
 
   return (
     <>
@@ -19,8 +22,8 @@ function App() {
       </div>
       <h1>Color Confirmer</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button className="red" onClick={() => increaseCount(count) }>
+          Change Color to blue
         </button>
         <p>Powered by Vite.</p>
       </div>
