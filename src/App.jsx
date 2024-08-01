@@ -10,6 +10,9 @@ function App() {
     setCount((count) => count + 1);
   }
 
+  const [buttonColor, setButtonColor] = useState('red');
+  const newButtonColor = buttonColor === 'red' ? 'blue' : 'red';
+
   return (
     <>
       <div>
@@ -22,8 +25,11 @@ function App() {
       </div>
       <h1>Color Confirmer</h1>
       <div className="card">
-        <button className="red" onClick={() => increaseCount(count) }>
+        {/* <button className="red" onClick={() => increaseCount(count) }>
           Change Color to blue
+        </button> */}
+        <button className={newButtonColor} onClick={() => setButtonColor(newButtonColor) }>
+          Change Color to {newButtonColor}
         </button>
         <p>Powered by Vite.</p>
       </div>

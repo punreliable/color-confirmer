@@ -1,18 +1,18 @@
 import {render, screen, fireEvent } from '@testing-library/react';
-import {logRoles} from "@testing-library/dom";
+// import {logRoles} from "@testing-library/dom";
 import App from './App';
 
-test("App contains correct heading", () => {
+test("App contains correct heading", async () => {
 
-  render(<App />);
-  const heading = screen.getByRole("heading",{ name: /Color Confirmer/i });
+
+  const heading = await screen.getByRole("heading", { name: /Color Confirmer/i });
   expect(heading).toBeInTheDocument();
 });
 
-test("Button starts with correct text", () => {
+test("Button starts with correct text", async () => {
 
   render(<App />);
-  const buttonElement = screen.getByRole("button", { name: /blue/i });
+  const buttonElement = await screen.getByRole("button", { name: /blue/i });
   expect(buttonElement).toHaveClass("red");
 });
 
