@@ -25,8 +25,15 @@ function App() {
         <button className={newButtonColor} onClick={() => setButtonColor(newButtonColor) }>
           Change Color to {newButtonColor}
         </button>
+        <input 
+          type="checkbox" 
+          id="disable-button-checkbox" 
+          defaultChecked={false} 
+        />
+
         <p>Powered by Vite.</p>
       </div>
+
       <p className="read-the-docs">Unshakable Self Assurance by Vitest.</p>
     </>
   )
